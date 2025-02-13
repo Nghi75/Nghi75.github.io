@@ -4,9 +4,12 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:'Poppins', sans-serif;
-}
+.poppins-light {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
 .navbar{
     display:flex;
     align-items:center;
@@ -142,70 +145,182 @@ p{
 padding:50px;
     }
     small{
-        color:#333;
+        color:#000000;
     }
     .menu-icon{
         width:28px;
         margin-left:20px;
+        display: none;
+    }
+    /*------footer------*/
+    .footer{
+        background:#000;
+        color:#8a8a8a;
+        font-size:14px;
+        padding:60px 0 20px;
+    }
+    .footer p{
+        color:#8a8a8a;
+    }
+    .footer h3{
+        color:#fff;
+        margin-bottom:20px;
+    }
+    .footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4{
+        min-width:250px;
+        margin-bottom:20px;
+    }
+    .footer-col-1{
+        flex-basis:30%;
+    }
+    .footer-col-2{
+        flex:1;
+        text-align:center;
+    }
+    .footer-col-2 img{
+        width:180px;
+        margin-bottom:20px;
+    }
+    .footer-col-3,.footer-col-4{
+        flex-basis:12%;
+        text-align:center;
+    }
+    ul{
+        list-style-type:none;
+    }
+    .app-logo{
+        margin-top:20px;
+    }
+    .app-logo img{
+        width:140px;
+    }
+    .footer hr{
+        border:none;
+        background: #b5b5b5;
+        height:1px;
+        margin:20px 0;
+    }
+    .copyright{
+        text-align:center;
     }
     /*-----------media query for menu ------*/
     @media only screen and (max-width: 800px) {
-        nav ul{ position:absolute;
+        nav ul{ 
+            position:absolute;
         top:70px;
     left:0;
 background:#333;
 width:100px;
+overflow:hidden;
+transition:max-height 0.5s;
+}
+nav ul li{
+    display:block;
+    margin-right:50px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+nav ul li a{
+    color:#fff;
+}
+.menu-icon{
+    display:block;
+    cursor:pointer;
+}
+    }
+/*-----all products page-----*/
+.row-2{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+select{
+    border: 1px solid #ff523b;
+    padding: 5px;
+}
+select:focus{
+    outline: none;
+}
+.page-btn{
+    margin: 0 auto 80px;
+}
+.page-btn span{
+    display: inline-block;
+    border: 1px solid #ff523b;
+    margin-left:10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor:pointer; 
+}
+.page-btn span:hover{
+    background: #ff523b;
+color: #fff;
+}
+/*------single product details--------*/
+ .single-product{
+    margin: 80px;
+ }
+ .single-product .col-2 img{
+    padding:0;
+ }
+ .single-product .col-2{
+    padding:20px;
+ }
+ .single-product h4{
+    margin:20px 0;
+    font-size:22px;
+    font-weight: bold;
+ }
+ .single-product select{
+    display:block;
+    padding:10px;
+    margin-top:20px ;
+ }
+ .single-product input{
+    width:50px;
+    height:40px;
+    padding-left:10px;
+    font-size:20px ;
+    margin-right:10px;
+    border:1px solid #ff523b;
+ }
+ input:focus{
+    outline:none;
+ }
+.single-product .fa{
+    color:#ff523b;
+    margin-left:10px;
+}
+.small-img-row{
+    display:flex;
+    justify-content:space-between;
+}
+.small-img-col{
+    flex-basis:24%;
+    cursor:pointer;
 }
 
-    }
-    .contact-form-container {
-        width: 50%;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        margin-top: 30px;
-    }
+
+
+    /*----media query forless than 600 screen size---*/
+    @media only screen and (max-width:600px){
+        .row{
+            text-align:center;
+        }
+        .col-2,.col-3,.col-4{
+            flex-basis:100%;
+        }
+        .single-product .row{
+            text-align: left;
+        }
+        .single-product .col-2{
+            padding: 20px 0;
+        }
+        .single-product h1{
+            font-size: 26px;
+            line-height: 32px;
+        }
+            
     
-    .contact-form {
-        display: flex;
-        flex-direction: column;
     }
-    
-    .contact-form label {
-        margin-bottom: 8px;
-        font-weight: bold;
-    }
-    
-    .contact-form input, .contact-form textarea {
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-    
-    .contact-form button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-    
-    .contact-form button:hover {
-        background-color: #45a049;
-    }
-    
-    footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 2px;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-    
